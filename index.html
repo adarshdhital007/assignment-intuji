@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Intuji Assignment</title>
+  </head>
+
+  <body>
+    <section class="dashboard">
+      <aside class="dashboard__sidebar sidebar">
+        <div class="sidebar__logo">
+          <span class="logo-full">ADARSH DHITAL</span>
+          <span class="logo-initials">AD</span>
+        </div>
+
+        <nav class="sidebar__nav nav-menu">
+          <a href="#" class="nav-menu__item nav-menu__item--active">
+            <span class="nav-menu__icon"
+              ><img src="./assets/sidebar/dashboard-icon.svg"
+            /></span>
+            <span class="nav-menu__text">Dashboard</span>
+          </a>
+          <a href="#" class="nav-menu__item">
+            <span class="nav-menu__icon"
+              ><img src="./assets/sidebar/calendar-icon.svg"
+            /></span>
+            <span class="nav-menu__text">Schedule</span>
+          </a>
+          <a href="#" class="nav-menu__item">
+            <span class="nav-menu__icon"
+              ><img src="./assets/sidebar/message-icon.svg"
+            /></span>
+            <span class="nav-menu__text">Message</span>
+          </a>
+          <a href="#" class="nav-menu__item">
+            <span class="nav-menu__icon"
+              ><img src="./assets/sidebar/analytics-icon.svg"
+            /></span>
+            <span class="nav-menu__text">Analytics</span>
+          </a>
+          <a href="#" class="nav-menu__item">
+            <span class="nav-menu__icon"
+              ><img src="./assets/sidebar/team-icon.svg"
+            /></span>
+            <span class="nav-menu__text">Team</span>
+          </a>
+
+          <div style="padding: 0 16px">
+            <div
+              class="panel__divider"
+              style="background-color: #cfd0d8; margin: 0"
+            ></div>
+          </div>
+
+          <a href="#" class="nav-menu__item">
+            <span class="nav-menu__icon"
+              ><img src="./assets/sidebar/profile-icon.svg"
+            /></span>
+            <span class="nav-menu__text">Profile</span>
+          </a>
+          <a href="#" class="nav-menu__item">
+            <span class="nav-menu__icon"
+              ><img src="./assets/sidebar/settings-icon.svg"
+            /></span>
+            <span class="nav-menu__text">Settings</span>
+          </a>
+        </nav>
+
+        <div class="sidebar__bottom-menu bottom-menu">
+          <a href="#" class="bottom-menu__item">
+            <span class="bottom-menu__icon"
+              ><img src="./assets/sidebar/help-icon.svg"
+            /></span>
+            <span class="bottom-menu__text">Help</span>
+          </a>
+          <a href="#" class="bottom-menu__item">
+            <span class="bottom-menu__icon"
+              ><img src="./assets/sidebar/logout-icon.svg"
+            /></span>
+            <span class="bottom-menu__text">Logout</span>
+          </a>
+        </div>
+      </aside>
+      <div class="dashboard__content content">
+        <div class="content__search-area">
+          <div class="search">
+            <img
+              class="search__icon"
+              src="./assets/icons/search-icon.svg"
+              alt="Search"
+            />
+            <input
+              type="text"
+              class="search__input"
+              placeholder="Search here..."
+            />
+          </div>
+        </div>
+        <div class="content__header">
+          <div class="header">
+            <button class="header__button button button--icon">
+              <img
+                src="./assets/icons/notification-icon.svg"
+                alt="Notifications"
+              />
+            </button>
+            <button class="header__button button button--icon">
+              <img src="./assets/icons/message-icon.svg" alt="Messages" />
+            </button>
+            <div class="header__profile user-profile">
+              <div class="user-profile__image-container">
+                <img
+                  class="user-profile__image"
+                  src="./assets/icons/user-avatar-icon.svg"
+                  alt="Profile"
+                />
+              </div>
+              <span class="user-profile__name">Mirie Kiritani</span>
+              <img
+                src="./assets/icons/chevron-down-icon.svg"
+                alt="Chevron Down"
+                class="user-profile__chevron"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="content__overview">
+          <div class="overview">
+            <h2 class="overview__title">Overview</h2>
+            <div class="overview__cards cards-grid"></div>
+          </div>
+        </div>
+        <div class="content__saving-plans">
+          <div class="panel panel--right-sidebar">
+            <div class="panel__header">
+              <h2 class="panel__title">Saving Plan</h2>
+              <a href="#" class="panel__action">See All</a>
+            </div>
+
+            <div style="padding: 0 16px">
+              <div
+                class="panel__divider"
+                style="background-color: #cfd0d8; margin: 0"
+              ></div>
+            </div>
+
+            <div class="panel__content saving-plans">
+              <div class="saving-plan">
+                <div class="saving-plan__header">
+                  <span class="saving-plan__title">Bali Vacation</span>
+                  <span class="saving-plan__date">Target: August 25 2022</span>
+                </div>
+                <div class="saving-plan__status">
+                  <div class="saving-plan__amounts">
+                    <div>
+                      <span class="saving-plan__current">$790.21</span>
+                      <span class="saving-plan__target">/$1,000</span>
+                    </div>
+                    <span
+                      class="saving-plan__percentage saving-plan__percentage--purple"
+                      >48%</span
+                    >
+                  </div>
+                  <div class="progress-bar">
+                    <div
+                      class="progress-bar__fill progress-bar__fill--purple"
+                      style="width: 48%"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="saving-plan">
+                <div class="saving-plan__header">
+                  <span class="saving-plan__title">New Gadget</span>
+                  <span class="saving-plan__date">Target: August 25 2022</span>
+                </div>
+                <div class="saving-plan__status">
+                  <div class="saving-plan__amounts">
+                    <div>
+                      <span class="saving-plan__current">$790.21</span>
+                      <span class="saving-plan__target">/$1,000</span>
+                    </div>
+                    <span
+                      class="saving-plan__percentage saving-plan__percentage--yellow"
+                      >79%</span
+                    >
+                  </div>
+                  <div class="progress-bar">
+                    <div
+                      class="progress-bar__fill progress-bar__fill--yellow"
+                      style="width: 79%"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="saving-plan">
+                <div class="saving-plan__header">
+                  <span class="saving-plan__title">Charity</span>
+                  <span class="saving-plan__date">Target: August 25 2022</span>
+                </div>
+                <div class="saving-plan__status">
+                  <div class="saving-plan__amounts">
+                    <div>
+                      <span class="saving-plan__current">$790.21</span>
+                      <span class="saving-plan__target">/$1,000</span>
+                    </div>
+                    <span
+                      class="saving-plan__percentage saving-plan__percentage--green"
+                      >32%</span
+                    >
+                  </div>
+                  <div class="progress-bar">
+                    <div
+                      class="progress-bar__fill progress-bar__fill--green"
+                      style="width: 32%"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content__analytics">
+          <div class="analytics">
+            <div class="analytics__header">
+              <h3 class="analytics__title">Analytics</h3>
+              <div class="analytics__legend">
+                <div class="analytics__labels">
+                  <span class="analytics__label analytics__label--blue"
+                    >Label 1</span
+                  >
+                  <span class="analytics__label analytics__label--yellow"
+                    >Label 1</span
+                  >
+                </div>
+                <select class="analytics__dropdown dropdown">
+                  <option>Weekly</option>
+                  <option>Monthly</option>
+                </select>
+              </div>
+            </div>
+            <canvas id="analyticsChart" class="analytics__chart"></canvas>
+          </div>
+        </div>
+        <div class="content__transactions">
+          <div class="panel panel--right-sidebar">
+            <div class="panel__header">
+              <h2 class="panel__title">Recent Transaction</h2>
+              <a href="#" class="panel__action">See All</a>
+            </div>
+
+            <div style="padding: 0 16px">
+              <div
+                class="panel__divider"
+                style="background-color: #cfd0d8; margin: 0"
+              ></div>
+            </div>
+
+            <div class="panel__content transactions">
+              <div class="transaction">
+                <div class="transaction__info">
+                  <div class="transaction__icon">
+                    <img src="./assets/icons/figma-icon.svg" alt="Transaction" />
+                  </div>
+                  <div class="transaction__details">
+                    <p class="transaction__name">Figma</p>
+                    <p class="transaction__date">August 20, 2022</p>
+                  </div>
+                </div>
+                <div class="transaction__amount-info">
+                  <p class="transaction__amount">$100</p>
+                  <p class="transaction__status">Completed</p>
+                </div>
+              </div>
+
+              <div class="transaction">
+                <div class="transaction__info">
+                  <div class="transaction__icon">
+                    <img src="./assets/icons/youtube-icon.svg" alt="Transaction" />
+                  </div>
+                  <div class="transaction__details">
+                    <p class="transaction__name">Youtube</p>
+                    <p class="transaction__date">August 20, 2022</p>
+                  </div>
+                </div>
+                <div class="transaction__amount-info">
+                  <p class="transaction__amount">$120</p>
+                  <p class="transaction__status">Completed</p>
+                </div>
+              </div>
+
+              <div class="transaction">
+                <div class="transaction__info">
+                  <div class="transaction__icon">
+                    <img src="./assets/icons/spotify-icon.svg" alt="Transaction" />
+                  </div>
+                  <div class="transaction__details">
+                    <p class="transaction__name">Spotify</p>
+                    <p class="transaction__date">August 20, 2022</p>
+                  </div>
+                </div>
+                <div class="transaction__amount-info">
+                  <p class="transaction__amount">$15</p>
+                  <p class="transaction__status">Completed</p>
+                </div>
+              </div>
+
+              <div class="transaction">
+                <div class="transaction__info">
+                  <div class="transaction__icon">
+                    <img src="./assets/icons/freepik-icon.svg" alt="Transaction" />
+                  </div>
+                  <div class="transaction__details">
+                    <p class="transaction__name">Freepik</p>
+                    <p class="transaction__date">August 20, 2022</p>
+                  </div>
+                </div>
+                <div class="transaction__amount-info">
+                  <p class="transaction__amount">$300</p>
+                  <p class="transaction__status">Completed</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>

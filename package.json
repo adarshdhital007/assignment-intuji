@@ -1,0 +1,21 @@
+{
+  "name": "adarshdhital007",
+  "version": "1.0.0",
+  "description": "Intuji Dashboard with Sass mixins",
+  "main": "index.html",
+  "scripts": {
+    "sass": "sass --watch style.scss:style.css",
+    "build": "sass style.scss:style.css --style compressed"
+  },
+  "keywords": [
+    "dashboard",
+    "sass",
+    "css",
+    "mixins"
+  ],
+  "author": "Adarsh Dhital",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.69.7"
+  }
+} 
